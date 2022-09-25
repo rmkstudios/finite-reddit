@@ -1,0 +1,83 @@
+@import "variables";
+
+.grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 10px;
+}
+.grid > * {
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.subreddits {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.subredditButton {
+  background-color: $color-secondary;
+  padding: 5px 10px;
+  border-radius: 5px;
+  opacity: 85%;
+}
+.subredditButton:hover {
+  opacity: 100%;
+}
+.nowBrowsing {
+  opacity: 35%;
+  margin-top: 15px;
+}
+
+.posts {
+  position: relative;
+}
+.connector {
+  background-color: $color-secondary;
+  width: 4px;
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  left: 46px;
+  z-index: 0;
+}
+.post {
+  font-size: $font-regular;
+  padding: $post-spacing;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  .thumbnail {
+    border-radius: 50%;
+    width: $thumbnail-width;
+    height: $thumbnail-height;
+    border: $thumbnail-border;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .noThumbnail {
+    border-radius: 50%;
+    width: $thumbnail-width;
+    height: $thumbnail-height;
+    border: $thumbnail-border;
+    background-color: $color-background;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .title {
+    display: grid;
+    align-content: center;
+  }
+  .postData {
+    font-size: 0.9rem;
+    opacity: 25%;
+    font-weight: $font-weight-light;
+    padding-top: 5px;
+  }
+}
+
+@media (max-width: 600px) {
+}
