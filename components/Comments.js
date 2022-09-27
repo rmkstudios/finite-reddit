@@ -1,14 +1,22 @@
-import styles from "../styles/Home.module.scss";
+import styles from "../styles/PostContents.module.scss";
 
 function Comments({ comments }) {
   return (
     <div className={styles.comments}>
       {comments != null ? (
-        <ul>
+        <>
           {comments.map((element, key) => (
-            <li key={key}>{element.data.body}</li>
+            <>
+              {element.data.body ? (
+                <div className={styles.comment} key={key}>
+                  {element.data.body}
+                </div>
+              ) : (
+                ""
+              )}
+            </>
           ))}
-        </ul>
+        </>
       ) : (
         "There are no comments to display"
       )}
@@ -17,7 +25,3 @@ function Comments({ comments }) {
 }
 
 export default Comments;
-
-/*
-comments.map((element) => element.data.body)
-*/

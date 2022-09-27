@@ -12,7 +12,11 @@ function Header({ subreddit, quickBar, setQuickBar, setLoading }) {
       <div className={styles.subreddits}>
         <AddSubreddit quickBar={quickBar} setQuickBar={setQuickBar} />
 
-        <DisplaySubreddits quickBar={quickBar} setLoading={setLoading} />
+        <DisplaySubreddits
+          quickBar={quickBar}
+          setLoading={setLoading}
+          subreddit={subreddit}
+        />
       </div>
       <div className={styles.nowBrowsing}>Browsing: r/{subreddit}</div>
     </header>

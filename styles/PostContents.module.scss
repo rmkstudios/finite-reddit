@@ -1,0 +1,26 @@
+@import "variables";
+
+.expandedPost {
+  padding-top: 20px;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+.mediaContent {
+  max-width: 100%;
+  max-height: 500px;
+}
+.comments {
+  opacity: 50%;
+  font-size: 0.9rem;
+  font-weight: 300;
+  padding-top: 10px;
+}
+.comment {
+  border-left: 3px solid $color-secondary;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+.selfText {
+  border-left: 3px solid $color-primary;
+  padding-left: 10px;
+}
