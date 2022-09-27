@@ -4,7 +4,7 @@ import Image from "next/image";
 function Loading() {
   return (
     <div className={styles.loading}>
-      <Image src="/loading.svg" alt="Loading.." width={50} height={50} />
+      <Image src="/loading.svg" alt="Loading.." width={30} height={30} />
     </div>
   );
 }

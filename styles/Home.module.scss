@@ -82,6 +82,19 @@
     justify-content: center;
     align-items: center;
   }
+  .caughtUp {
+    border-radius: 50%;
+    width: $thumbnail-width;
+    height: $thumbnail-height;
+    border: $thumbnail-border;
+    background-color: $color-background;
+    z-index: 1;
+    color: $color-secondary;
+    font-size: 2rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
   .title {
     display: grid;
     align-content: center;
@@ -97,11 +110,12 @@
   padding: $post-spacing;
 }
 .comments {
-  display: grid;
-  gap: 10px;
   opacity: 25%;
   font-size: 0.9rem;
   font-weight: 300;
+}
+.expandedPost {
+  padding-top: 20px;
 }
 
 @media (max-width: 600px) {

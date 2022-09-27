@@ -6,7 +6,7 @@ import styles from "../styles/Home.module.scss";
 import Header from "../components/Header";
 import Loading from "./Loading";
 import { RiCheckboxCircleFill } from "react-icons/ri";
-import Post from "./Post";
+import AllPosts from "./AllPosts";
 
 function Homepage({ subreddit }) {
   const [posts, setPosts] = useState([]);
@@ -56,12 +56,12 @@ function Homepage({ subreddit }) {
         setLoading={setLoading}
       />
       <div className={styles.posts}>
-        {loading ? <Loading /> : <Post posts={posts} />}
+        {loading ? <Loading /> : <AllPosts posts={posts} />}
         {!loading ? (
           <>
             <div className={styles.connector}></div>
             <div className={styles.post}>
-              <div className={styles.noThumbnail}>
+              <div className={styles.caughtUp}>
                 <RiCheckboxCircleFill />
               </div>
               <div className={styles.title}>You're all caught up!</div>
