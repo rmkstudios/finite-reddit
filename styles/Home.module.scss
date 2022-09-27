@@ -1,16 +1,25 @@
 @import "variables";
 
 .grid {
-  max-width: 900px;
-  margin: 0 auto;
   display: grid;
+  grid-template-columns: 75px 1fr;
   gap: 10px;
 }
-.grid > * {
+.sidebar {
+  background-color: $color-primary;
+  width: 75px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 0;
+}
+.mainContent {
+  max-width: 900px;
+  margin: 0 auto;
+  z-index: 1;
 }
 .logo {
-  font-size: 1.8rem;
-  font-weight: 600;
+  max-width: 140px;
 }
 .subreddits {
   display: flex;
@@ -119,5 +128,8 @@
   padding: $post-spacing;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
+  .post {
+    font-size: $font-small;
+  }
 }

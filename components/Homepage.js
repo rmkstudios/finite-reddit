@@ -49,27 +49,30 @@ function Homepage({ subreddit }) {
       <Head>
         <title>Browsing: r/{subreddit} - Finite Reddit</title>
       </Head>
-      <Header
-        subreddit={subreddit}
-        quickBar={quickBar}
-        setQuickBar={setQuickBar}
-        setLoading={setLoading}
-      />
-      <div className={styles.posts}>
-        {loading ? <Loading /> : <AllPosts posts={posts} />}
-        {!loading ? (
-          <>
-            <div className={styles.connector}></div>
-            <div className={styles.post}>
-              <div className={styles.caughtUp}>
-                <RiCheckboxCircleFill />
+      <div className={styles.sidebar}></div>
+      <div className={styles.mainContent}>
+        <Header
+          subreddit={subreddit}
+          quickBar={quickBar}
+          setQuickBar={setQuickBar}
+          setLoading={setLoading}
+        />
+        <div className={styles.posts}>
+          {loading ? <Loading /> : <AllPosts posts={posts} />}
+          {!loading ? (
+            <>
+              <div className={styles.connector}></div>
+              <div className={styles.post}>
+                <div className={styles.caughtUp}>
+                  <RiCheckboxCircleFill />
+                </div>
+                <div className={styles.title}>You're all caught up!</div>
               </div>
-              <div className={styles.title}>You're all caught up!</div>
-            </div>
-          </>
-        ) : (
-          ""
-        )}
+            </>
+          ) : (
+            ""
+          )}
+        </div>
       </div>
     </div>
   );

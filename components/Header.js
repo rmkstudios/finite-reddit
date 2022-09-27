@@ -6,9 +6,7 @@ import AddSubreddit from "./AddSubreddit";
 function Header({ subreddit, quickBar, setQuickBar, setLoading }) {
   return (
     <header>
-      <div className={styles.logo}>
-        Finite Reddit - get back to what's important
-      </div>
+      <img src="/logo.png" className={styles.logo} />
       <div className={styles.subreddits}>
         <AddSubreddit quickBar={quickBar} setQuickBar={setQuickBar} />
 
