@@ -1,6 +1,7 @@
 import styles from "../styles/Home.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 function Thumbnail({ imageURL, postURL }) {
   function isImgUrl(imageURL) {
@@ -15,7 +16,9 @@ function Thumbnail({ imageURL, postURL }) {
         </Link>
       ) : (
         <Link href={postURL}>
-          <div className={styles.noThumbnail}></div>
+          <div className={styles.noThumbnail}>
+            <RiArrowDropDownLine />
+          </div>
         </Link>
       )}
     </>
